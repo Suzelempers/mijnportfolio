@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oefenen met JSON objecten</title>
+</head>
+<body>
+  <h1>Oefenen met JSON objecten</h1>
+  <script>
+    // JSON-object definiÃ«ren
+    const jsonObject = {
+      naam: "Suze",
+      leeftijd: 16,
+      dorp: "Roelofarendsveen"
+    };
+
+    // JSON-object weergeven op de console
+    console.log(jsonObject);
+
+    // JSON-object omzetten naar JSON-string
+    const jsonString = JSON.stringify(jsonObject);
+
+    // JSON-string weergeven op de console
+    console.log(jsonString);
+
+    // JSON-string omzetten naar JavaScript-object
+    const parsedObject = JSON.parse(jsonString);
+
+    // Eigenschappen van het JavaScript-object weergeven op de console
+    for (let key in parsedObject) {
+      console.log(`${key}: ${parsedObject[key]}`);
+    }
+
+    // Console-uitvoer weergeven in HTML
+    function logToConsole(message) {
+      const consoleOutput = document.getElementById("console-output");
+      consoleOutput.innerHTML += message + "<br>";
+    }
+
+    console.log = logToConsole;
+  </script>
+
+  <h2>Console-uitvoer:</h2>
+  <div id="console-output"></div>
+</body>
+<button style="margin-right: 10px; margin-bottom: 10px; position: fixed; bottom: 0; right: 0; background-color: #fff; border: 1px solid #000; padding: 20px 30px; font-size: 20px;" onclick="history.back()">Terug</button>
+
+</html>

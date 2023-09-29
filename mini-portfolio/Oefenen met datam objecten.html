@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oefenen met datam objecten</title>
+</head>
+<body>
+  <h1>Oefenen met datam objecten</h1>
+  <script>
+    // Huidige datumobject aanmaken
+    const huidigeDatum = new Date();
+
+    // Datum weergeven in gewenst formaat
+    console.log(huidigeDatum.toLocaleDateString());
+
+    // Delen van de datum extraheren en weergeven
+    const dag = huidigeDatum.getDate();
+    const maand = huidigeDatum.getMonth() + 1; // Maanden beginnen bij 0, dus voegen we 1 toe
+    const jaar = huidigeDatum.getFullYear();
+
+    console.log(`Dag: ${dag}`);
+    console.log(`Maand: ${maand}`);
+    console.log(`Jaar: ${jaar}`);
+
+    // Tweede datumobject aanmaken
+    const andereDatum = new Date("2023-06-08");
+
+    // Datumvergelijking uitvoeren en resultaat weergeven
+    if (andereDatum > huidigeDatum) {
+      console.log("andereDatum is later dan huidigeDatum");
+    } else if (andereDatum < huidigeDatum) {
+      console.log("andereDatum is eerder dan huidigeDatum");
+    } else {
+      console.log("andereDatum is gelijk aan huidigeDatum");
+    }
+
+    // Console-uitvoer weergeven in HTML
+    function logToConsole(message) {
+      const consoleOutput = document.getElementById("console-output");
+      consoleOutput.innerHTML += message + "<br>";
+    }
+
+    console.log = logToConsole;
+  </script>
+
+  <h2>Console-uitvoer:</h2>
+  <div id="console-output"></div>
+</body>
+<button style="margin-right: 10px; margin-bottom: 10px; position: fixed; bottom: 0; right: 0; background-color: #fff; border: 1px solid #000; padding: 20px 30px; font-size: 20px;" onclick="history.back()">Terug</button>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oefenen met objecten</title>
+</head>
+<body>
+  <h1>Oefenen met objecten</h1>
+  <script src="pad/naar/je/javascript-bestand.js"></script>
+  <script>
+
+    const persoon = {
+      naam: "Suze Lempers",
+      leeftijd: 16,
+      hobbies: "Koken en Kpop albums kopen",
+      begroeting: function()  {
+        console.log("Hallo, mijn naam is " + this.naam + ". Ik ben" + this.leeftijd + "jaar oud en mijn hobbies zijn" + this.hobbies + ".")
+    }
+};
+    
+  
+    console.log(persoon.naam); // Output: Suze Lempers
+    console.log(persoon.leeftijd); // Output: 16
+    console.log(persoon.hobbies); //output: Koken en Kpop albums kopen
+
+    persoon.begroeting(); // Output: Hallo, mijn naam is Suze Lempers. Ik ben 16 jaar oud en mijn hobbies zijn Koken en Kpop albums kopen.
+
+  
+  </script>
+</body>
+<button style="margin-right: 10px; margin-bottom: 10px; position: fixed; bottom: 0; right: 0; background-color: #fff; border: 1px solid #000; padding: 20px 30px; font-size: 20px;" onclick="history.back()">Terug</button>
+
+</html>
+
